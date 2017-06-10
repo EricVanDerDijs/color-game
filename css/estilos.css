@@ -1,0 +1,137 @@
+@-webkit-keyframes out{
+	0%{
+		-webkit-transform: scale(1.5,1.5) rotate(360deg);
+	}
+
+	100%{
+		-webkit-transform: scale(1,1) rotate(0deg);
+	}
+}
+
+@-moz-keyframes out{
+	0%{
+		-moz-transform: scale(1.5,1.5) rotate(360deg);
+	}
+
+	100%{
+		-moz-transform: scale(1,1) rotate(0deg);
+	}
+}
+
+@keyframes out{
+	0%{
+		transform: scale(1.5,1.5) rotate(360deg);
+	}
+
+	100%{
+		transform: scale(1,1) rotate(0deg);
+	}
+}
+
+@-webkit-keyframes in{
+	0%{
+		-webkit-transform: scale(1,1) rotate(0deg);
+	}
+
+	100%{
+		-webkit-transform: scale(1.5,1.5) rotate(360deg);
+	}
+}
+
+@-moz-keyframes in{
+	0%{
+		-moz-transform: scale(1,1) rotate(0deg);
+	}
+
+	100%{
+		-moz-transform: scale(1.5,1.5) rotate(360deg);
+	}
+}
+
+@keyframes in{
+	0%{
+		transform: scale(1,1) rotate(0deg);
+	}
+
+	100%{
+		transform: scale(1.5,1.5) rotate(360deg);
+	}
+}
+
+*, *:before, *:after{
+	margin: 0;
+	padding: 0;
+	border: 0;
+	-ms-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+html, body{
+	font-size: 16px;
+	font-family: helvetica, sans-serif;
+}
+
+header{
+	background: #A0B5B9;
+}
+
+#logo{
+	background: transparent url("../assets/fallout_logo.png") no-repeat;
+	background-size: cover; 
+	float: left;
+	height: 12em;
+	width: 20em;
+	transform: rotate(-20deg);
+
+}
+
+.botones{
+	list-style-type: none;
+	text-align: center;
+}
+
+.botones a{
+	background: grey;
+	border-radius: 200px;
+	color: white;
+	display: block;
+	height: 135px;
+	line-height: 135px;
+	overflow: hidden;
+	width: 135px;
+	text-decoration: none;
+}
+
+.botones li{
+	border: dashed grey 0.8em;
+	border-radius: 200px;
+	display: inline-block;
+	margin: auto 4em;
+
+	/*transform: scale(2,2);*/
+
+	-webkit-animation: out 1.7s;
+	-webkit-animation-timing-function: cubic-bezier(0,.68,.77,.77);
+	-moz-animation: out 1.7s;
+	-moz-animation-timing-function: cubic-bezier(0,.68,.77,.77);
+	animation: out 1.7s;
+	animation-timing-function: cubic-bezier(0,.68,.77,.77);
+			
+}
+
+.rotacion li:hover{
+	-webkit-transition: 1s ease-in;
+	transition: 1.5s linear;
+	-webkit-transform: rotateZ(360deg);
+	transform: rotateZ(360deg);
+
+	-webkit-animation: in 1.7s;
+	-webkit-animation-timing-function: cubic-bezier(.85,.2,.87,.86);
+	-moz-animation: in 1.7s;
+	-moz-animation-timing-function: cubic-bezier(.85,.2,.87,.86);
+	animation: in 1.7s;
+	animation-timing-function: cubic-bezier(.85,.2,.87,.86);
+
+	transform: scale(1.5,1.5);
+}
