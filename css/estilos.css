@@ -1,3 +1,171 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab');
+@import url('https://fonts.googleapis.com/css?family=Yesteryear');
+@import url('https://fonts.googleapis.com/css?family=Kanit:900i');
+
+*, *:before, *:after{
+		margin: 0;
+		padding: 0;
+		border: 0;
+		-ms-box-sizing: border-box;
+		-webkit-box-sizing: border-box;
+		box-sizing: border-box;
+}
+
+@media only screen 
+and (max-width: 650px){
+
+	html{
+		height: 100% !important;
+		width: 100% !important;
+		font-size: 18px;
+	}
+
+	body{
+		background: grey;
+		height: 400% !important;
+		width: 100% !important;
+	}
+
+	.botones{
+		display: inline-block;
+		position: absolute;
+		right: 0.5em;
+		bottom: 0.2em;
+		width: 50%;
+	}
+	
+	.botones a{
+		color: #FF9320;
+		overflow: hidden;
+		text-decoration: none;
+		text-shadow: -0.05em -0.05em black;
+	}
+
+	.botones li{
+		display: inline-block;
+		background: #83795C;
+		border-bottom: thin solid black;
+		border-right: thin solid black;
+		border-radius: 1em 2em;
+		font-family: 'Kanit', sans-serif;
+		list-style-type: none;
+		padding: .15em;
+		margin: 0.15em 0;
+		text-align: center;
+		vertical-align: middle;
+		width: 100%;
+	}
+
+	.botones li:active{
+		display: inline-block;
+		background: #83795C;
+		border-bottom: thin solid black;
+		border-right: thin solid black;
+		border-radius: 1em 2em;
+		font-family: 'Kanit', sans-serif;
+		list-style-type: none;
+		padding: .15em;
+		margin: 0.15em 0;
+		text-align: center;
+		transform: translate(2px,2px);
+		vertical-align: middle;
+		width: 100%;
+		}
+
+	.header{
+		background: rgb(100,105,119);
+		background: -moz-linear-gradient(-45deg, rgb(100,105,119) 12%, rgb(82,99,147) 35%, rgb(100,120,152) 61%, rgb(130,150,186) 100%);
+		background: -webkit-linear-gradient(-45deg, rgb(100,105,119) 12%,rgb(82,99,147) 35%,rgb(100,120,152) 61%,rgb(130,150,186) 100%);
+		background: linear-gradient(135deg, rgb(100,105,119) 12%,rgb(82,99,147) 35%,rgb(100,120,152) 61%,rgb(130,150,186) 100%);
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#646977', endColorstr='#8296ba',GradientType=1 );
+		border-bottom: thick solid yellow;
+		border-top: .5em double yellow;
+		height: 25% !important;
+		position: fixed;
+		top:0;
+		width: 100% !important;
+		z-index: 10;
+		}
+
+	.logo{
+		display: inline-block;
+		background: transparent url("../assets/fallout_logo.png") no-repeat;
+		background-size: contain;
+		height: 3.8em;
+		position: absolute;
+		transform: rotate(-20deg);
+		width: 50%;
+		top: 25%;
+	}
+
+	.logo:active{
+		display: inline-block;
+		background: transparent url("../assets/fallout_logo.png") no-repeat;
+		background-size: contain;
+		height: 3.8em;
+		position: absolute;
+		transform: rotate(-20deg) translate(2px,2px);
+		top: 25%;
+		width: 50%;
+		
+	}
+	
+	.seccion{
+		height:18.75% !important; 
+		width:100% !important;
+	}
+
+	.separador{
+		height: 6.25% !important; 
+		width:100% !important;
+	}
+	
+	.welcome{
+		background: cadetblue url("../assets/welcome-home.jpg") no-repeat;
+		background-size: cover;
+		background-position: 30% 50%;
+	}
+
+	.welcome h2{
+		color: #F68A00; 
+		font-family: "Yesteryear", cursive;
+		font-size: 4em;
+		position: relative;
+		text-align: center; 
+		text-shadow: 0.2em 0.2em #4E4E4E;
+		transform: rotate(-10deg);
+		top: .15em;
+	}
+
+	.welcome p{
+		color: #972C00; 
+		font-family: "Roboto Slab", serif;
+		font-size: 1em;
+		position: relative;
+		text-align: center; 
+		transform: rotate(0deg);
+		top: 1em;
+	}
+	
+	.wasteland{
+		overflow-y: hidden;
+ 		overflow-x: scroll;
+	}
+
+	.wasteland div{
+		background: red;
+		display: inline-block;
+		float: left;
+		height: 426px;
+		width: 90%;
+	}
+}
+
+/*
+
+and (-webkit-max-device-pixel-ratio: 1.5)
+and (max-device-pixel-ratio: 1.5){
+
 @-webkit-keyframes out{
 	0%{
 		-webkit-transform: scale(1.5,1.5) rotate(360deg);
@@ -135,3 +303,4 @@ header{
 
 	transform: scale(1.5,1.5);
 }
+*/
