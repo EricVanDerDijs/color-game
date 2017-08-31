@@ -1,0 +1,79 @@
+*,html{
+	font-size: 18px;
+	margin: 0;
+}
+
+body{
+	background-color: #232323;
+}
+
+h1 {
+	font-size: 90%;
+	line-height: 1.1;
+}
+
+.bar{
+	background-color: white;
+	width: 100%;
+	text-align: center;
+	margin-bottom: 1em;
+}
+
+.button{
+	background: white;
+	border: none;
+	color: #2A8DB8;
+	font-family: sans-serif;
+	font-size: 0.9em;
+	font-weight: bold;
+	letter-spacing: 0.75px;
+	transition: all 0.5s;
+}
+
+.button:hover{
+	background: #2A8DB8;
+	color: white;
+}
+
+.container {
+	margin: 0 auto;
+	max-width: 600px;
+}
+.square {
+	border-radius: 15%;
+	float: left;
+	margin: 1.66%;
+	padding-bottom: 30%;
+	width: 30%;
+	transition: background-color 0.5s;
+}
+
+.selected {
+	background: #2A8DB8;
+	color: white;
+}
+
+.title{
+	background: #2A8DB8;
+	color: white;
+	font-family: Open Sans Condensed, sans-serif;
+	margin: 0 auto;
+	padding: 1em 0;
+	text-align: center;
+}
+
+
+#message{
+	color: #777;
+	display: inline-block;
+	font-family: sans-serif;
+	font-size: 0.9em;
+	margin: 0 auto;
+	text-align: center;
+	width: 50%;
+}
+
+#toGuess {
+	font-size: 300%;
+	text-transform: uppercase;
+}

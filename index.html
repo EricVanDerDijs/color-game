@@ -1,37 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta charset="UTF-8">
-	<meta name="Description" content="Unofficial Fallout 1 webpage, giving an overal information about this fantastic game">
-	<meta name="Viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-	<title>Fallout Fanpage</title>
-	<link rel="stylesheet" href="css/estilos.css">
+	<meta name="Description" content="Brand New Guessing game">
+	<link rel="stylesheet" href="colorgame.css">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
+	<title>Color Guessing Game</title>
 </head>
 <body>
-	<header class="header">
-		<a href="#seccion-1" class="logo"></a>
-		<ul class="botones rotacion">
-			<li><a href="#seccion-2">The Wasteland</a></li>
-			<li><a href="#seccion-3">S.P.E.C.I.A.L.</a></li>
-			<li><a href="#seccion-4">Neighbors</a></li>
-		</ul>
-	</header>
-	
-	<div class="separador" id="seccion-1"></div>
-	<div class="seccion welcome">
-		<h2>Welcome...!!</h2>
-		<p>     to your best post-apocalyptic role playing game</p>
-	</div>
-	<div class="separador" id="seccion-2"></div>
-	<div class="seccion wasteland">
-		<div> blalalalalalalalalalalalalalala</div>
-		<div>lalsdañksñdlkañlskdñlkñlkdñas</div>
-		<div>lkañwdkñlsñlkfñslkdlfkñslkdñfod</div>
-	</div>
-	<div class="separador" id="seccion-3"></div>
-	<div class="seccion" id="impar"></div>
-	<div class="separador" id="seccion-4"></div>
 
-	<div class="seccion" id="par"></div>
+<header class="title">
+	<div class="container">
+		<div>
+			<h1>THE GREAT
+			<br>	
+			<span id="toGuess"></span>
+			<br>
+			GUESSING GAME!</h1>
+		</div>
+	</div>	
+</header>
+
+<nav class="bar">
+	<div class="container">
+		<button class="button" id="reset">Play Again?</button>
+		<span id="message"></span>
+		<button class="button" id="easy">Easy</button>
+		<button class="button selected" id="hard">Hard</button>
+	</div>
+</nav>
+
+	<div class="container">
+		<div class="square circle blue"></div>
+		<div class="square"></div>
+		<div class="square"></div>
+		<div class="square"></div>
+		<div class="square"></div>
+		<div class="square"></div>
+	</div>
+	
+<script src="colorgame.js"></script>
 </body>
 </html>
