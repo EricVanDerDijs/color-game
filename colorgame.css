@@ -28,6 +28,7 @@ h1 {
 	font-weight: bold;
 	letter-spacing: 0.75px;
 	transition: all 0.5s;
+	outline: none;
 }
 
 .button:hover{

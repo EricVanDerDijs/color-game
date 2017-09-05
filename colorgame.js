@@ -6,7 +6,7 @@ var hardButon = document.querySelector("#hard");
 var displayMessage = document.querySelector("#message");
 var header = document.querySelector(".title");
 var winningColor; 
-var dificulty = 6; //6 for hard 3 for easy
+var numSquares = 6; //6 for hard 3 for easy
 
 //Devuelve un color rgb aleatorio (string)
 function randomColor(){
@@ -17,7 +17,7 @@ function randomColor(){
 
 /*Recorre la lista de elementos colors y les asigna un color aleatorio
 luego vuelve a recorrerlo para verificar que no se repitan colores*/
-function setColors(){
+function resetGame(){
 	header.style.backgroundColor = "#2A8DB8";
 	var i;
 	var j;
@@ -37,40 +37,40 @@ function setColors(){
 		}
 	}
 	selectWinningColor();
+	displayMessage.textContent = "";
+	reset.textContent = "NEW COLORS";
 } 
 
 function selectWinningColor() {
-	var i = Math.floor(Math.random()*dificulty);
+	var i = Math.floor(Math.random()*numSquares);
 	winningColor = colors[i].style.backgroundColor;
 	rgbToGuess.textContent = winningColor;
 }
 
 function changeDificulty() {
-	if (this === easyButon){
-		dificulty = 3;
-		setColors();
-		for (var i = 3; i < colors.length; i++){
+	hardButon.classList.remove("selected");
+	easyButon.classList.remove("selected");
+	this.classList.add("selected");
+	for (var i = 3; i < colors.length; i++){
+		if (this === easyButon){        
+			numSquares = 3;
 			colors[i].style.display = "none";
-		}
-		easyButon.classList.add("selected");
-		hardButon.classList.remove("selected");
-	}
-	else{
-		dificulty = 6;
-		setColors();
-		for (var i = 3; i < colors.length; i++){
+			resetGame();
+			}
+		else{
+			numSquares = 6;
+			resetGame();
 			colors[i].style.display = "initial";
 		}
-		hardButon.classList.add("selected");
-		easyButon.classList.remove("selected");	
 	}
 }
 
 function verifyGuess(){
 	if (this.style.backgroundColor === winningColor){
 		displayMessage.textContent = "Correct!";
+		reset.textContent = "PLAY AGAIN?"
 		header.style.backgroundColor = winningColor;
-		for (var i = 0; i < dificulty; i++){
+		for (var i = 0; i < numSquares; i++){
 			colors[i].style.backgroundColor = winningColor;
 		}
 	}
@@ -79,11 +79,9 @@ function verifyGuess(){
 		displayMessage.textContent ="Try Again!";
 	}
 }
-	
 
-
-window.onload = setColors();
-reset.addEventListener("click", setColors);
+window.onload = resetGame();
+reset.addEventListener("click", resetGame);
 easyButon.addEventListener("click", changeDificulty);
 hardButon.addEventListener("click", changeDificulty);
 for (var i = 0; i < colors.length; i++){
